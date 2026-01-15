@@ -16,6 +16,13 @@ export const WIPLE_MODULES: Module[] = [
         description: "알고리즘에 최적화된 고밀도 텍스트 데이터",
         price: 15000,
     },
+    {
+        id: "signal-review-unlimited",
+        name: "무제한 체험단 (Unlimited)",
+        category: "SIGNAL",
+        description: "월 8만원으로 누리는 무제한 체험단 마케팅",
+        price: 80000,
+    },
 
     // VISUAL (Content)
     {
