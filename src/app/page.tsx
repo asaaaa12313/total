@@ -5,6 +5,7 @@ import { ZeroGravityProtocol } from "@/components/sections/ZeroGravityProtocol";
 import { ModuleDockingSystem } from "@/components/sections/ModuleDockingSystem";
 import { PerformanceChart } from "@/components/sections/PerformanceChart";
 import { LaunchSequence } from "@/components/sections/LaunchSequence";
+import { TalentMarketLimitations } from "@/components/sections/TalentMarketLimitations";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
 
       <main className="relative pb-32">
         <Hero />
+        <TalentMarketLimitations />
         <ZeroGravityProtocol />
         <ModuleDockingSystem />
         <PerformanceChart />
