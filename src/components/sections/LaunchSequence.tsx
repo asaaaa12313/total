@@ -74,24 +74,41 @@ export function LaunchSequence() {
                         </div>
 
                         {selectedModules.length > 0 && (
-                            <div className="p-6 rounded-2xl border border-indigo-100 bg-indigo-50/30 space-y-4">
-                                <div className="flex justify-between items-center pb-3 border-b border-indigo-100">
-                                    <span className="text-xs font-bold text-indigo-600 uppercase tracking-wide">선택한 모듈 견적</span>
-                                    <span className="text-xs font-bold text-slate-400">{selectedModules.length}개 항목</span>
+                            <div className="bg-slate-50 rounded-2xl border-2 border-dashed border-slate-300 p-6 space-y-4 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-3 opacity-10">
+                                    <img src="/icons/receipt.svg" alt="" className="w-24 h-24" /> {/* Optional decorative element */}
+                                </div>
+                                <div className="flex justify-between items-center pb-4 border-b border-slate-200 relative z-10">
+                                    <div className="flex flex-col">
+                                        <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">FINAL ESTIMATE</span>
+                                        <span className="text-base font-bold text-slate-900">선택된 서비스 목록</span>
+                                    </div>
+                                    <span className="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                                        {selectedModules.length} ITEMS
+                                    </span>
                                 </div>
 
-                                <div className="space-y-3">
+                                <div className="space-y-3 relative z-10 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
                                     {selectedModules.map(m => (
-                                        <div key={m.id} className="flex justify-between items-center">
-                                            <span className="text-sm text-slate-700 font-medium">{m.name}</span>
-                                            <span className="text-sm font-bold text-slate-900">{m.price.toLocaleString()}원</span>
+                                        <div key={m.id} className="flex justify-between items-start group">
+                                            <div className="flex-1 pr-4">
+                                                <div className="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">
+                                                    {m.name}
+                                                </div>
+                                                <div className="text-[11px] text-slate-500 line-clamp-1">
+                                                    {m.category} MODULE
+                                                </div>
+                                            </div>
+                                            <span className="text-sm font-bold text-slate-900 whitespace-nowrap font-mono">
+                                                {m.price.toLocaleString()} 원
+                                            </span>
                                         </div>
                                     ))}
                                 </div>
 
-                                <div className="pt-4 border-t border-indigo-100 flex justify-between items-center">
-                                    <span className="text-base font-bold text-slate-900">예상 총 견적</span>
-                                    <span className="text-xl font-bold text-indigo-600">{total}원</span>
+                                <div className="pt-4 border-t-2 border-slate-900 flex justify-between items-center relative z-10">
+                                    <span className="text-lg font-black text-slate-900">TOTAL AMOUNT</span>
+                                    <span className="text-2xl font-black text-indigo-600 font-mono tracking-tight">{total} 원</span>
                                 </div>
                             </div>
                         )}
