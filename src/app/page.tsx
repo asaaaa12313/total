@@ -15,9 +15,9 @@ export default function Home() {
       <main className="relative pb-32">
         <Hero />
         <TalentMarketLimitations />
+        <PerformanceChart />
         <ZeroGravityProtocol />
         <ModuleDockingSystem />
-        <PerformanceChart />
         <LaunchSequence />
       </main>
 
