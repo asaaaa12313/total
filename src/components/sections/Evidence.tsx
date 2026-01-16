@@ -3,10 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const EVIDENCE_IMAGES = [
-    "/images/sample/i_0i10u7.png",
-    "/images/sample/i_0i77mv.png",
-    "/images/sample/i_3r9g10.png",
+const EVIDENCE_IMAGES: string[] = [
+    // Waiting for new data from user
 ];
 
 export function Evidence() {
