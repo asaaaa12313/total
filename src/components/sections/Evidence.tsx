@@ -16,8 +16,8 @@ const EVIDENCE_IMAGES = [
     "/images/sample/i_tptwxk.png",
     "/images/sample/i_won0sh.png",
     "/images/sample/i_x0t8p6.png",
-    "/images/sample/화면 캡처 2026-01-16 114321.png",
-    "/images/sample/화면 캡처 2026-01-16 114344.png",
+    "/images/sample/sample_capture_1.png",
+    "/images/sample/sample_capture_2.png",
 ];
 
 export function Evidence() {
@@ -65,7 +65,7 @@ export function Evidence() {
                                 src={src}
                                 alt={`Portfolio Evidence ${index + 1}`}
                                 fill
-                                className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                                className="object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                         </div>
                     ))}
