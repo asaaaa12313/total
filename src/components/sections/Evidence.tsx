@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const EVIDENCE_IMAGES: string[] = [
-    // Waiting for new data from user
+    "/images/1.png",
+    "/images/2.png",
+    "/images/3.png",
+    "/images/evidence_4.png",
+    "/images/evidence_5.png",
+    "/images/i_gdd9pn.png",
+    "/images/i_x0t8p6.png",
 ];
 
 export function Evidence() {
