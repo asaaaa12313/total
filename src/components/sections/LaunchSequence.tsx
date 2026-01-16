@@ -22,14 +22,15 @@ export function LaunchSequence() {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="max-w-3xl mx-auto text-center mb-12">
                     <span className="text-indigo-600 font-bold tracking-widest text-sm mb-2 block uppercase">
-                        신규 고객 혜택
+                        신규 고객 한정 혜택
                     </span>
                     <h2 className="text-3xl md:text-5xl font-black mb-6 text-slate-900 tracking-tight">
-                        맞춤형 전략 기획서 무료 제공
+                        마케팅 로드맵 기획 + 1:1 컨설팅<br />
+                        <span className="text-indigo-600">무료 제공</span> (기존 50,000원)
                     </h2>
                     <p className="text-slate-600 font-medium text-lg">
-                        지금 상담을 요청하시면, 귀사의 비즈니스에 최적화된<br className="hidden md:block" />
-                        <span className="text-slate-900 font-bold">마케팅 실행 전략</span>을 제안해드립니다.
+                        지금 견적을 확인하시고 상담을 요청하시면,<br className="hidden md:block" />
+                        귀사의 비즈니스 성장 전략을 <span className="text-slate-900 font-bold">무료로 진단</span>해드립니다.
                     </p>
                 </div>
 
@@ -97,7 +98,7 @@ export function LaunchSequence() {
 
                         <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                             <button className="w-full py-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-indigo-500/30 transition-all">
-                                기획서 신청하기
+                                무료 컨설팅 신청하기
                             </button>
                         </motion.div>
 
@@ -105,6 +106,30 @@ export function LaunchSequence() {
                             작성해주신 정보는 상담 목적으로만 활용되며, 안전하게 보호됩니다.
                         </p>
                     </form>
+                </div>
+
+                {/* Long-term Consulting Banner */}
+                <div className="mt-8 max-w-2xl mx-auto">
+                    <motion.div
+                        whileHover={{ y: -2 }}
+                        className="bg-gradient-to-r from-slate-900 to-indigo-950 rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden shadow-xl border border-indigo-500/30 cursor-pointer group"
+                    >
+                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/20 blur-3xl -translate-y-1/2 translate-x-1/2 rounded-full" />
+
+                        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div className="text-center md:text-left">
+                                <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                                    <span className="text-yellow-400">🤝</span>
+                                    <h3 className="text-lg md:text-xl font-bold text-white">장기 컨설팅은 문의주세요!</h3>
+                                </div>
+                                <p className="text-indigo-200 text-sm font-medium">지속적인 성장을 위한 맞춤 파트너십</p>
+                            </div>
+                            <button className="px-6 py-3 bg-yellow-500 text-indigo-950 font-black rounded-xl text-sm hover:bg-yellow-400 transition-colors shadow-lg shadow-yellow-500/20 whitespace-nowrap">
+                                📞 상담 예약하기
+                            </button>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
