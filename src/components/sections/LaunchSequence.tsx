@@ -5,7 +5,8 @@ import { NeonButton } from "../ui/NeonButton";
 import { motion } from "framer-motion";
 
 export function LaunchSequence() {
-    const selectedModules = useCartStore((state) => state.selectedModules);
+    const { selectedModules, totalPrice } = useCartStore();
+    const total = totalPrice().toLocaleString();
 
     return (
         <section id="launch-sequence" className="py-24 relative overflow-hidden bg-slate-50">
@@ -72,14 +73,24 @@ export function LaunchSequence() {
                         </div>
 
                         {selectedModules.length > 0 && (
-                            <div className="p-5 rounded-xl border border-indigo-100 bg-indigo-50/50">
-                                <div className="text-xs font-bold text-indigo-600 mb-3 uppercase tracking-wide">선택한 서비스</div>
-                                <div className="flex flex-wrap gap-2">
+                            <div className="p-6 rounded-2xl border border-indigo-100 bg-indigo-50/30 space-y-4">
+                                <div className="flex justify-between items-center pb-3 border-b border-indigo-100">
+                                    <span className="text-xs font-bold text-indigo-600 uppercase tracking-wide">선택한 모듈 견적</span>
+                                    <span className="text-xs font-bold text-slate-400">{selectedModules.length}개 항목</span>
+                                </div>
+
+                                <div className="space-y-3">
                                     {selectedModules.map(m => (
-                                        <span key={m.id} className="text-xs bg-white border border-slate-200 px-3 py-1.5 rounded-lg text-slate-700 font-bold shadow-sm">
-                                            {m.name}
-                                        </span>
+                                        <div key={m.id} className="flex justify-between items-center">
+                                            <span className="text-sm text-slate-700 font-medium">{m.name}</span>
+                                            <span className="text-sm font-bold text-slate-900">{m.price.toLocaleString()}원</span>
+                                        </div>
                                     ))}
+                                </div>
+
+                                <div className="pt-4 border-t border-indigo-100 flex justify-between items-center">
+                                    <span className="text-base font-bold text-slate-900">예상 총 견적</span>
+                                    <span className="text-xl font-bold text-indigo-600">{total}원</span>
                                 </div>
                             </div>
                         )}
