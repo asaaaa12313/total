@@ -7,6 +7,8 @@ import { PerformanceChart } from "@/components/sections/PerformanceChart";
 import { LaunchSequence } from "@/components/sections/LaunchSequence";
 import { TalentMarketLimitations } from "@/components/sections/TalentMarketLimitations";
 
+import { Footer } from "@/components/layout/Footer";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[var(--bg-space)] text-white selection:bg-[var(--neon-cyan)] selection:text-black">
@@ -21,6 +23,7 @@ export default function Home() {
         <LaunchSequence />
       </main>
 
+      <Footer />
       <FloatingDock />
     </div>
   );
