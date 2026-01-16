@@ -35,7 +35,6 @@ export function Header() {
                     </div>
 
                     <div className="flex items-center gap-6 text-sm font-medium text-slate-600">
-                        <span className="cursor-pointer hover:text-indigo-600 transition-colors">고객센터</span>
                         <div
                             className="flex items-center gap-2 cursor-pointer group"
                             onClick={() => setIsCartOpen(true)}
