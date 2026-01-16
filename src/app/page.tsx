@@ -6,7 +6,7 @@ import { ModuleDockingSystem } from "@/components/sections/ModuleDockingSystem";
 import { PerformanceChart } from "@/components/sections/PerformanceChart";
 import { LaunchSequence } from "@/components/sections/LaunchSequence";
 import { TalentMarketLimitations } from "@/components/sections/TalentMarketLimitations";
-
+import { Evidence } from "@/components/sections/Evidence";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
@@ -19,6 +19,7 @@ export default function Home() {
         <TalentMarketLimitations />
         <PerformanceChart />
         <ZeroGravityProtocol />
+        <Evidence />
         <ModuleDockingSystem />
         <LaunchSequence />
       </main>
