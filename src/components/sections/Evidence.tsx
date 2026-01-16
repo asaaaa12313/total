@@ -7,7 +7,17 @@ const EVIDENCE_IMAGES = [
     "/images/1.png",
     "/images/2.png",
     "/images/3.png",
-    // Duplicates for seamless loop if needed, or we can just repeat the array in the render
+    "/images/sample/i_0i10u7.png",
+    "/images/sample/i_0i77mv.png",
+    "/images/sample/i_3r9g10.png",
+    "/images/sample/i_50qmdc.png",
+    "/images/sample/i_gdd9pn.png",
+    "/images/sample/i_hjisai.png",
+    "/images/sample/i_tptwxk.png",
+    "/images/sample/i_won0sh.png",
+    "/images/sample/i_x0t8p6.png",
+    "/images/sample/화면 캡처 2026-01-16 114321.png",
+    "/images/sample/화면 캡처 2026-01-16 114344.png",
 ];
 
 export function Evidence() {
@@ -40,22 +50,22 @@ export function Evidence() {
                         x: {
                             repeat: Infinity,
                             repeatType: "loop",
-                            duration: 30,
+                            duration: 60, // Slower duration for more images
                             ease: "linear",
                         },
                     }}
                 >
                     {/* We render the images twice to create a seamless infinite loop */}
-                    {[...EVIDENCE_IMAGES, ...EVIDENCE_IMAGES, ...EVIDENCE_IMAGES, ...EVIDENCE_IMAGES].map((src, index) => (
+                    {[...EVIDENCE_IMAGES, ...EVIDENCE_IMAGES].map((src, index) => (
                         <div
                             key={index}
-                            className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg border border-slate-100 group"
+                            className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg border border-slate-100 group bg-slate-50"
                         >
                             <Image
                                 src={src}
                                 alt={`Portfolio Evidence ${index + 1}`}
                                 fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                             />
                         </div>
                     ))}
