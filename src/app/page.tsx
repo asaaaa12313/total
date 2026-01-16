@@ -7,6 +7,7 @@ import { PerformanceChart } from "@/components/sections/PerformanceChart";
 import { LaunchSequence } from "@/components/sections/LaunchSequence";
 import { TalentMarketLimitations } from "@/components/sections/TalentMarketLimitations";
 import { Evidence } from "@/components/sections/Evidence";
+import { CustomerReviews } from "@/components/sections/CustomerReviews";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <PerformanceChart />
         <ZeroGravityProtocol />
         <Evidence />
+        <CustomerReviews />
         <ModuleDockingSystem />
         <LaunchSequence />
       </main>
