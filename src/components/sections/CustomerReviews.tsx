@@ -109,41 +109,46 @@ export function CustomerReviews() {
                     {[...REVIEWS, ...REVIEWS, ...REVIEWS].map((review, index) => (
                         <div
                             key={`${review.id}-${index}`}
-                            className="relative w-[320px] bg-white rounded-3xl p-6 shadow-xl border border-slate-100 flex-shrink-0 flex flex-col h-[420px] justify-between"
+                            className="relative w-[360px] md:w-[400px] bg-white rounded-3xl p-8 shadow-xl border border-slate-100 flex-shrink-0 flex flex-col h-[480px] justify-between whitespace-normal break-words"
                         >
                             {/* Header */}
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="w-10 h-10 rounded-xl bg-slate-200 flex items-center justify-center">
-                                    <User className="w-5 h-5 text-slate-500" />
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center">
+                                    <User className="w-6 h-6 text-slate-400" />
                                 </div>
-                                <div>
-                                    <h4 className="font-bold text-slate-900 text-sm">
-                                        {review.name} <span className="font-normal text-slate-500">{review.role}</span>
+                                <div className="flex flex-col items-start">
+                                    <h4 className="font-bold text-slate-900 text-base">
+                                        {review.name} <span className="font-normal text-slate-500 ml-1">{review.role}</span>
                                     </h4>
+                                    <div className="flex gap-0.5 mt-1">
+                                        {[1, 2, 3, 4, 5].map((s) => (
+                                            <div key={s} className="w-3 h-3 rounded-full bg-yellow-400" />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Chat Area */}
-                            <div className="flex-1 space-y-4 font-medium text-sm">
+                            <div className="flex-1 space-y-6 font-medium text-[15px]">
                                 {/* Customer Message */}
-                                <div className="flex flex-col items-start gap-1">
-                                    <div className="bg-slate-100 text-slate-700 p-4 rounded-2xl rounded-tl-sm leading-relaxed relative">
+                                <div className="flex flex-col items-start gap-2">
+                                    <div className="bg-slate-100 text-slate-700 p-5 rounded-3xl rounded-tl-none leading-relaxed relative">
                                         {review.message}
                                     </div>
-                                    <span className="text-[10px] text-slate-400 pl-1">{review.time}</span>
+                                    <span className="text-xs text-slate-400 pl-2">{review.time}</span>
                                 </div>
 
                                 {/* Reply Message */}
-                                <div className="flex flex-col items-end gap-1">
-                                    <div className="bg-yellow-300 text-slate-900 p-4 rounded-2xl rounded-tr-sm leading-relaxed font-bold shadow-sm">
+                                <div className="flex flex-col items-end gap-2">
+                                    <div className="bg-yellow-400 text-slate-900 p-5 rounded-3xl rounded-tr-none leading-relaxed font-bold shadow-sm">
                                         {review.reply}
                                     </div>
                                 </div>
                             </div>
 
                             {/* Footer Quote */}
-                            <div className="mt-6 pt-4 border-t border-slate-100 text-center">
-                                <p className="text-slate-800 font-bold text-sm">
+                            <div className="pt-6 border-t border-slate-100 text-center">
+                                <p className="text-slate-900 font-extrabold text-base tracking-tight">
                                     "{review.footer}"
                                 </p>
                             </div>
